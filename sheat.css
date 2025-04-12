@@ -1,0 +1,15 @@
+.box-1{
+    color: aliceblue;
+    font: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: white;
+}
+body{
+    background-color: darkblue;
+    color: white;
+}
+.nextpage{
+    color: white;
+    text-decoration: white;
+    text-decoration: underline;
+}
