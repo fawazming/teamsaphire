@@ -4,14 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Adeoye Portfolio</h1>
-    <p>My name is Adeyemi Abdul-Hameed</p>
-    <ul>
-        <li><a href="project1/index.html">About Myself</a></li>
-        <li><a href="project2/index.html">Large Language Models(LLMs)</a></li>
-        <li><a href="project3/form.html">Created a form</a></li>
-    </ul>
+    <header>
+        <div class="container">
+            <h1>My Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="project1/index.html">About Me</a></li>
+                    <li><a href="myprojects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>My name is Adeyemi Abdul-hameed.I'm a passionate web developer with a love for creating beautiful and functional websites. I enjoy working with the latest technologies and continuously learning new skills</p>
+        </div>
+    </section>
+
+    <section id="Projects"></section>
+    <div class="container">
+        <img src="" alt="">
+        <center><a href="project2/index.html">A brief description of my first project. It showcases my skills in HTML and CSS
+        </a></center>
+    </div>
+    <div class="project">
+        <img src="" alt="">
+        <center><a href="project3/form.html
+        ">A brief description of my second project. It showcases my skill in creatinga form </a></center>
+    </div>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
