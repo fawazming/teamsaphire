@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 201</title>
+    <!-- <link rel="stylesheet" href="css/water.css"> -->
+</head>
+<body>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+        a:hover{
+            font-size: 1.5rem;
+            text-decoration: underline;
+        }
+        button:hover{
+            cursor: pointer;
+            font-size: 1.5rem;
+
+        }
+        .header{
+            margin: 10px;
+            background-color: #e4e4e4;
+            padding: 10px;
+            border-radius: 10px;
+            color: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav{
+            <!-- border: 1px #000 solid; -->
+        }
+        nav>ul{
+            display: flex;
+            list-style: none;
+            padding-inline-start: 0;
+        }
+        nav>ul>li{
+            margin-left: 10px;
+        }
+    </style>
+    <header class="header">
+        <img src="logo.png" alt="" height="30px" class="logo">
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <button>Call us 24/7</button>
+    </header>
+</body>
+</html>
