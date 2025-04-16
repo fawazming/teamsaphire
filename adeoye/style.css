@@ -5,6 +5,14 @@ body{
     color: #333;
 
 }
+a{
+    text-decoration: solid;
+    
+}
+a:hover{
+    font-size: 1.5rem;
+    text-decoration: wavy;
+}
 
 header{
     background: #35424a;
