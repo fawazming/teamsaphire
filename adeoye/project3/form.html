@@ -1,128 +1,124 @@
 <!DOCTYPE html>
-<htmlang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Form</title>
+    <title>Business Registration Form</title>
     <link rel="stylesheet" href="water.css">
 </head>
 <body>
-    <center><h1>DESCRIPTION</h1></center>
-    <br>
     <center>
-        <form action=""> <fieldset>
-            <label for="">Surname:</label>
-            <input type="text" placeholder="Surname" name="name">
-        </fieldset>
-         <fieldset>
-                <label for="">Other Names:</label>
-                <input type="text" placeholder="Other Names" name="name">
+        <h1>Business Registration Form</h1>
+        <p>Please fill out the following information to register your business.</p>
+        <br>
+        <form action="">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="surname">Surname:</label>
+                <input type="text" placeholder="Surname" name="surname" id="surname" required>
             </fieldset>
-         <fieldset>
-                <label for="">Gender:</label>
-                <select name="gender" id="">
-                    <option value="select">Select your gender</option>
+            <fieldset>
+                <label for="otherNames">Other Names:</label>
+                <input type="text" placeholder="Other Names" name="otherNames" id="otherNames" required>
+            </fieldset>
+            <fieldset>
+                <label for="gender">Gender:</label>
+                <select name="gender" id="gender" required>
+                    <option value="">Select your gender</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                 </select>
             </fieldset>
-        <fieldset>
-            <label for="">Business Name:</label>
-            <input type="text" placeholder="Official Business Name" name="bname">
-        </fieldset>
-        <fieldset>
-            <label for="">Email address:</label>
-            <input type="email" placeholder="Email address" name="email">
-        </fieldset>
-        <fieldset
-            <label for="">Phone number:</label>
-            <input type="tel" placeholder="Phone Number" name="phone" id="">
-            
-        </fieldset>
-        <fieldset>
-            <label for="">Physical address:</label>
-            <textarea name="address" placeholder="(for shipping and returns)" id="address"></textarea>
-        </fieldset>
-            
-        <fieldset>
-            <label for="">Business Type:</label>
-            <select name="btype" id="">
-                <option value="select">Select</option>
-                <option value="Retail Business">Retail Business</option>
-                <option value="Manufacturing Business">Manufacturing Business</option>
-                <option value="Sole proprietorship">Sole proprietorship</option>
-                <option value="Real Estate Business">Real Estate Business</option>
-                <option value="Corporation">Corporation</option>
-                <option value="Limited Liability Company ">Limited Liability Company </option>
-            </select>
-        </fieldset>
-        <fieldset
-             <label for="">Tax Identification Number:</label>
-            <input type="text" placeholder="Tax Identification Number" name="Tax Identification Number" id="">
-        </fieldset>
-       
-       
-        
-
-
-         <br><br><hr>
-        <h1>NEXT OF KIN</h1>
-        <br>
-        <fieldset>
-        <label for="">Surname:</label>
-            <input type="text" placeholder="Surname" name="name">
-        </fieldset>
-         <fieldset>
-                <label for="">Other Names:</label>
-                <input type="text" placeholder="Other Names" name="name">
-         </fieldset>
-        <fieldset>
-            <label for="">Email address:</label>
-            <input type="email" placeholder="Email address" name="email">
-        </fieldset>
-        <fieldset>
-            <label for="">Phone number:</label>
-            <input type="tel" placeholder="Phone Number" name="phone" id="">
-            
-        </fieldset>
-        <fieldset>
-            <label for="">Contact Address:</label>
-            <textarea name="address" placeholder="Home or office address" id="address"></textarea>
-        </fieldset>
-        <fieldset>
-            <label for="">Relationship Status:</label>
-            <select name="Relationship" id="">
-                <option value="select">Select your Relationship</option>
-                <option value="Father">Father</option>
-                <option value="Mother">Mother</option>
-                <option value="Family Friends">Family Friends</option>
-                <option value="Uncle">Uncle</option>
-                <option value="Sister">Sister</option>
-                <option value="Brother">Brother</option>
-                <option value="Aunty">Aunty</option>
-            </select>
-
-        </fieldset>
-        <br><br><hr>
-        <h1>ADDITION INFORMATION</h1>
-        <fieldset>
-            <label for="">Social Media Links:</label>
-            <input type="text" name="SML">
-        </fieldset>
-        <fieldset>
-            <label for="">Customer service email:</label>
-            <input type="text" name="email">
-        </fieldset>
-        <fieldset>
-            <label for="">Customer service Phone number:</label>
-            <input type="tel" name="phone number">
-        </fieldset>
-        <br><br>
-         <div class="container">
-            <button class="login-button">SIGN IN</button>
-         </div>
-         <a href="../index.html">Back to Portfolio</a>
+            <fieldset>
+                <label for="businessName">Business Name:</label>
+                <input type="text" placeholder="Official Business Name" name="businessName" id="businessName" required>
+            </fieldset>
+            <fieldset>
+                <label for="email">Email Address:</label>
+                <input type="email" placeholder="Email address" name="email" id="email" required>
+            </fieldset>
+            <fieldset>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" placeholder="Phone Number" name="phone" id="phone" required>
+            </fieldset>
+            <fieldset>
+                <label for="address">Physical Address:</label>
+                <textarea name="address" placeholder="(for shipping and returns)" id="address" required></textarea>
+            </fieldset>
+            <fieldset>
+                <label for="businessType">Business Type:</label>
+                <select name="businessType" id="businessType" required>
+                    <option value="">Select</option>
+                    <option value="Retail Business">Retail Business</option>
+                    <option value="Manufacturing Business">Manufacturing Business</option>
+                    <option value="Sole Proprietorship">Sole Proprietorship</option>
+                    <option value="Real Estate Business">Real Estate Business</option>
+                    <option value="Corporation">Corporation</option>
+                    <option value="Limited Liability Company">Limited Liability Company</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <label for="taxId">Tax Identification Number:</label>
+                <input type="text" placeholder="Tax Identification Number" name="taxId" id="taxId" required>
+            </fieldset>
+            <br><br>
+            <hr>
+            <h2>Next of Kin Information</h2>
+            <fieldset>
+                <legend>Next of Kin Details</legend>
+                <label for="kinSurname">Surname:</label>
+                <input type="text" placeholder="Surname" name="kinSurname" id="kinSurname" required>
+            </fieldset>
+            <fieldset>
+                <label for="kinOtherNames">Other Names:</label>
+                <input type="text" placeholder="Other Names" name="kinOtherNames" id="kinOtherNames" required>
+            </fieldset>
+            <fieldset>
+                <label for="kinEmail">Email Address:</label>
+                <input type="email" placeholder="Email address" name="kinEmail" id="kinEmail" required>
+            </fieldset>
+            <fieldset>
+                <label for="kinPhone">Phone Number:</label>
+                <input type="tel" placeholder="Phone Number" name="kinPhone" id="kinPhone" required>
+            </fieldset>
+            <fieldset>
+                <label for="kinAddress">Contact Address:</label>
+                <textarea name="kinAddress" placeholder="Home or office address" id="kinAddress" required></textarea>
+            </fieldset>
+            <fieldset>
+                <label for="relationship">Relationship Status:</label>
+                <select name="relationship" id="relationship" required>
+                    <option value="">Select your Relationship</option>
+                    <option value="Father">Father</option>
+                    <option value="Mother">Mother</option>
+                    <option value="Family Friend">Family Friend</option>
+                    <option value="Uncle">Uncle</option>                    <option value="Sister">Sister</option>
+                    <option value="Brother">Brother</option>
+                    <option value="Aunty">Aunty</option>
+                </select>
+            </fieldset>
+            <br><br>
+            <hr>
+            <h2>Additional Information</h2>
+            <fieldset>
+                <label for="socialMediaLinks">Social Media Links:</label>
+                <input type="text" placeholder="Enter your social media links" name="socialMediaLinks" id="socialMediaLinks">
+            </fieldset>
+            <fieldset>
+                <label for="customerServiceEmail">Customer Service Email:</label>
+                <input type="email" placeholder="Customer service email" name="customerServiceEmail" id="customerServiceEmail">
+            </fieldset>
+            <fieldset>
+                <label for="customerServicePhone">Customer Service Phone Number:</label>
+                <input type="tel" placeholder="Customer service phone number" name="customerServicePhone" id="customerServicePhone">
+            </fieldset>
+            <br><br>
+            <div class="container">
+                <button type="submit" class="login-button">Submit</button>
+            </div>
+            <br>
+            <a href="../index.html">Back to Portfolio</a>
+        </form>
     </center>
-
 </body>
 </html>
