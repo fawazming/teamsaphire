@@ -12,13 +12,12 @@ body{
     color: black;
 }
 .box-1 h1{
-     monospace;
-    font-weight: 800;
+    font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.2mm;
     word-spacing: 0cqb;
-    background-color: rgb(129, 127, 129)
-    
+    background-color: rgb(211, 211, 211)
+
     
 }
 .box-3 h2{

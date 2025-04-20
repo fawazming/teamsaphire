@@ -10,81 +10,82 @@
 
 <body class="text-sans p-0">
     <section class="bg-gray-100">
-        <header class="flex items-center justify-between mx-10 mt-2">
-            <div class="logo flex items-center ">
-                <img src="logo.svg" alt="" width="50px"> <span class="ml-3 font-bold">Snappy</span>
+        <header class="flex items-center justify-between mx-4  md:mx-5 ">
+            <div class="logo flex items-center">
+                <img src="logo.svg" alt="Snappy Logo" class="w-10 md:w-16"> 
+                <span class="ml-2 font-bold text-sm md:text-lg">Snappy</span>
             </div>
-            <nav class="">
-                <ul class="flex justify-between xs:hidden">
-                    <li><a href="../index.html" class="mr-3">Home</a></li>
-                    <li><a href="" class="mr-3">Apps</a></li>
-                    <li><a href="" class="mr-3">Services</a></li>
-                    <li><a href="" class="mr-3">Blog</a></li>
-                    <li><a href="" class="mr-3">Business</a></li>
-                    <li><a href="" class="text-blue-600 underline">Download</a></li>
-
-
-                    <span class="ml-5 font-bold"> 🌐 
-                        <select name="" id="">
-                            <option value="">EN</option>
-                            <option value="">FR</option>
-                            <option value="">AR</option>
-                            <option value="">JP</option>
-                            <option value="">YO</option>
+            <nav class="md:text-xs">
+                <ul class="flex justify-between items-center xs:hidden md:text-xs">
+                    <li><a href="../index.html" class="mr-2 text-sm md:text-base">Home</a></li>
+                    <li><a href="#" class="mr-2 text-sm md:text-base">Apps</a></li>
+                    <li><a href="#" class="mr-2 text-sm md:text-base">Services</a></li>
+                    <li><a href="#" class="mr-2 text-sm md:text-base">Blog</a></li>
+                    <li><a href="#" class="mr-2 text-sm md:text-base">Business</a></li>
+                    <li><a href="#" class="text-blue-600 underline text-sm md:text-base">Download</a></li>
+                    <span class="ml-2 font-bold text-sm md:text-base"> 🌐 
+                        <select aria-label="Select Language" class="text-sm md:text-base">
+                            <option value="en">EN</option>
+                            <option value="fr">FR</option>
+                            <option value="ar">AR</option>
+                            <option value="jp">JP</option>
+                            <option value="yo">YO</option>
                         </select>
                     </span>
                 </ul>
             </nav>
         </header>
-
-        <div class="hero py-20 text-center">
-            <h1 class="font-semibold text-4xl lg:text-6xl" >Transform Your Communication <br> with Instant Connectivity</h1>
-
-            <p class="text-xs pt-2 text-gray-700 lg:text-2xl mb-4">Install Snappy on all your device to stay engaged and continue every <br> conversation</p>
-            <a href="" class="bg-blue-500 text-white rounded-2xl py-1 px-4 text-xs lg:text-2xl mt-3 ">Download Now</a>
-        </div>
     </section>
-    <nav class=" content-around flex gap-4 lg:text-xl md:text-sm max-h-screen pr-3 lg:max-h-screen lg:justify-evenly">
-    <div class="ml-5 pl-3 bg-blue-600 rounded-2xl pt-2 px-9 pb-8 justify-items-centre items-center border-8 bg-auto bg-centre inline-block ">
-        <div class="inline-block py-1 px-4 text-xs lg:text-2xl mt-3 bg-gray-100 rounded-full w-16 h-16 content-center pt-4 ">
-            <img src="https://icongr.am/clarity/computer.svg?size=128&color=currentColo" alt="" class="logo" width="50px"></div>
-            <br>
-        <p class="text-xs pt-2 text-gray-100 lg:text-2xl mb-4 inline-block">Desktop</p>
-        <h1 class="font-semibold text-3xl text-white lg:text-6xl mb-2">PC/Mac</h1>
-        <p class="text-gray-100">stay ahead with quick, adaptable Communication <br>strategies for evolving business landscapes.</p> <br>
-            <div class="inline-flex border py-3 px-4 text-lg lg:text-2xl mt-2 bg-gray-100 rounded-2xl flex items-center justify-centre ">
-            <img src="https://icongr.am/clarity/backup.svg?size=26&color=currentColor
-            " alt="" width="30px"> <span class=" font-bold pl-2 md:text-xs">Download</span>
+    <section class="hero py-20 text-center">
+        <h1 class="font-semibold text-4xl md:text-2xl lg:text-6xl">Transform Your Communication <br> with Instant Connectivity</h1>
+        <p class="text-xs pt-2 text-gray-700 lg:text-2xl mb-4">Install Snappy on all your devices to stay engaged and continue every <br> conversation</p>
+        <a href="#" class="bg-blue-500 text-white rounded-2xl py-1 px-4 text-xs lg:text-2xl mt-3">Download Now</a>
+    </section>
+    
+    <nav class="flex flex-col md:flex-row gap-4 lg:text-xl md:text-sm md:max-h-screen pr-3 lg:max-h-screen lg:justify-evenly">
+        <div class="ml-5 pl-5 lg:pl-5 bg-blue-600 md:p-4 lg:p-2 rounded-2xl  px-9 pb-8 border-8 flex-1">
+            <div class="py-1 px-4 text-xs lg:text-2xl mt-2 bg-gray-100 rounded-full w-16 h-16 flex items-center justify-center">
+                <img src="https://icongr.am/clarity/computer.svg?size=128&color=currentColor" alt="Desktop Icon" class="logo" width="50px">
+            </div>
+            <p class="text-xs pt-2 text-gray-100 lg:text-2xl mb-4 inline-block">Desktop</p>
+            <h1 class="font-bold text-3xl text-white mb-2 lg:text-4xl md:text-4xl">PC/Mac</h1>
+            <p class="text-gray-100 mb-5">Stay ahead with quick, adaptable communication <br> strategies for evolving business landscapes.</p>
+            <div class="inline-flex border py-4 px-5 lg:py-5 lg:text-2xl mt-2 bg-gray-100 rounded-2xl flex items-center justify-center">
+                <img src="https://icongr.am/clarity/backup.svg?size=26&color=currentColor" alt="Download Icon" width="30px">
+                <a href="#" class="font-bold md:text-xs pl-1 text-xl lg:text-2xl">Download</a>
+            </div>
         </div>
-    </div>
-    <div class="ml-5 pl-4 bg-gray-300 rounded-2xl px-9 pb-8 justify-between  border-8 bg-auto bg-centre inline-block pt-1">
-        <div class="inline-block py-1 px-4 text-xs lg:text-2xl mt-3 bg-gray-100 rounded-full w-16 h-16 content-center pt-4">
-            <img src="https://icongr.am/devicon/apple-original.svg?size=37&color=currentColor" alt="" class="logo" width="50px"></div>
-            <br>
-        <p class="text-xs pt-2 text-gray-900 lg:text-2xl mb-4 inline-block">Mobile phone</p>
-        <h1 class="font-semibold text-3xl text-gray-900 lg:text-6xl mb-2">iOS</h1>
-        <p class="text-gray-900 pb-4">stay ahead with quick, adaptable Communication <br>strategies for evolving business landscapes.</p> 
-            <div class="inline-flex border py-1 px-4 text-lg lg:text-2xl mt-2 bg-black rounded-2xl flex justify-between text-gray-100 ">
-            <img src="https://icongr.am/devicon/apple-original.svg?size=37&color=ffffff
-            " alt="" width="30px"> <span class=" font-bold text-sm md:text-xs">Download on the
-                 <h1 class=" font-bold text-2xl pb-2 md:text-lg">App Store</h1></span>
+    
+        <div class="ml-5 pl-5 bg-gray-300 rounded-2xl px-9 pb-8 border-8 flex-1">
+            <div class="inline-block py-1 px-4 text-xs lg:text-2xl mt-3 bg-gray-100 rounded-full w-16 h-16 flex items-center justify-center">
+                <img src="https://icongr.am/devicon/apple-original.svg?size=37&color=currentColor" alt="iOS Icon" class="logo" width="50px">
+            </div>
+            <p class="text-xs pt-2 text-gray-900 lg:text-2xl mb-4 inline-block">Mobile phone</p>
+            <h1 class="font-bold text-3xl text-gray-900 lg:text-4xl mb-2">iOS</h1>
+            <p class="text-gray-900 pb-4 mb-2">Stay ahead with quick, adaptable communication <br> strategies for evolving business landscapes.</p>
+            <div class="inline-flex border py-1 px-4 text-lg lg:text-2xl mt-2 bg-black rounded-2xl flex justify-between text-gray-100">
+                <img src="https://icongr.am/devicon/apple-original.svg?size=37&color=ffffff" alt="App Store Icon" width="30px">
+                <span class="font-bold text-sm md:text-xs pl-1 py-1  lg:text-base">Download on the
+                    <h1 class="font-bold text-2xl lg:text-2xl md:text-xs">App Store</h1>
+                </span>
+            </div>
         </div>
-    </div>
-</div>
-<div class="ml-5 p-3 bg-gray-300 rounded-2xl px-9 pb-8 justify-between border-8 bg-auto bg-centre inline-block pt-1">
-    <div class="inline-block py-1 px-4 text-xs lg:text-2xl mt-3 bg-gray-100 rounded-full w-16 h-16 content-center pt-4">
-        <img src="https://icongr.am/fontawesome/android.svg?size=39&color=050505" alt="" class="logo" width="50px"></div>
-        <br>
-    <p class="text-xs pt-2 text-gray-900 lg:text-2xl mb-4 inline-block">Mobile phone</p>
-    <h1 class="font-semibold text-3xl text-gray-900 lg:text-6xl mb-2">Android</h1>
-    <p class="text-gray-900 pb-4">stay ahead with quick, adaptable Communication <br>strategies for evolving business landscapes.</p> 
+    
+        <div class="ml-5 p-3 bg-gray-300 rounded-2xl px-6 pb-8 border-8 flex-1">
+            <div class="inline-block py-1 px-3 text-xs lg:text-2xl  bg-gray-100 rounded-full w-16 h-16 flex items-center justify-center">
+                <img src="https://icongr.am/fontawesome/android.svg?size=39&color=050505" alt="Android Icon" class="logo" width="50px">
+            </div>
+            <p class="text-xs pt-2 text-gray-900 lg:text-2xl mb-4 inline-block">Mobile phone</p>
+            <h1 class="font-bold text-3xl text-gray-900 lg:text-4xl m3-2 pb-3">Android</h1>
+            <p class="text-gray-900 pb-5">Stay ahead with quick, adaptable communication strategies for evolving business landscapes</p>
+        
         <div class="inline-flex border py-1 px-4 text-lg lg:text-2xl mt-2 bg-black rounded-2xl flex justify-between text-gray-100">
-        <img src="playstore.svg" alt="" width="30px"> <span class=" font-bold text-sm md:text-xs">GET IT ON
-             <h1 class="font-bold text-base pb-2 md:text-xml">Google Play</h1></span>
-    </div>
-</div>
-</nav>
-<img src="cont.png" alt="" width="10000px" class="md:justify-centre">
+            <img src="playstore.svg" alt="App Store Icon" width="30px">
+            <span class="font-bold text-base pl-2 md:text-xs lg:text-base">GET IT ON
+                <h1 class="font-bold text-2xl pb-2 lg:text-xl md:text-xs">Google Play</h1>
+            </span>
+        </div>
+        </nav>
+        <img src="cont.png" alt="" width="10000px" class="md:justify-centre">
 </body>
-
 </html>
