@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <h1 class="text-5xl font-bold text-blue-600 text-center mt-10">facebook</h1>
+    <div class="bg-white shadow-md rounded-lg p-8 w-96 items-center mx-auto mt-5">
+        <h2 class="text-2xl font-normal text-center mb-6">log in to facebook</h2>
+        
+        <form >
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium text-gray-700">Email or Phone</label>
+                <input type="text" id="email" name="email" required class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-blue-500" placeholder="Enter your email or phone">
+            </div>
+            <div class="mb-6">
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="password" name="password" required class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-blue-500" placeholder="Enter your password">
+            </div>
+            <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-2 rounded-md hover:bg-blue-700 transition duration-200">Log In</button>
+        </form>
+
+        <div class="mt-4 text-center">
+            <a href="#" class="text-sm text-blue-600 hover:underline">Forgotten password?</a>
+        </div>
+
+        <div class="mt-6 border-t border-gray-300 text-center">
+            <p class="text-sm text-gray-600 my-4">Don't have an account?</p>
+            <a href="signup.html" class="bg-green-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-green-700 transition duration-200">Create new account </a>
+        </div>
+    </div>
+
+</body>
+</html>
