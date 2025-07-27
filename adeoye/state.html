@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagamu and Information Technology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            text-align: center;
+            box-sizing: border-box;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #1a365d;
+        }
+        .slide h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #2c5282;
+        }
+        .slide p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        .slide-content {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .navigation {
+            position: fixed;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            z-index: 100;
+        }
+        .nav-btn {
+            background-color: #4299e1;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        .nav-btn:hover {
+            background-color: #2b6cb0;
+        }
+        .progress-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 5px;
+            background-color: #4299e1;
+            transition: width 0.3s;
+            z-index: 101;
+        }
+        .hidden {
+            display: none;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .bg-1 { background: linear-gradient(135deg, #a5f3fc 0%, #0891b2 100%); }
+        .bg-2 { background: linear-gradient(135deg, #bae6fd 0%, #0369a1 100%); }
+        .bg-3 { background: linear-gradient(135deg, #93c5fd 0%, #1e40af 100%); }
+        .bg-4 { background: linear-gradient(135deg, #818cf8 0%, #4338ca 100%); }
+        .icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="progress-bar"></div>
+    
+    <!-- Slide 1: Introduction to Sagamu -->
+    <div class="slide bg-1" id="slide1">
+        <div class="slide-content fade-in">
+            <i class="fas fa-map-marked-alt icon"></i>
+            <h1 class="text-4xl font-bold mb-6">Welcome to Sagamu</h1>
+            <p>Sagamu is a prominent town in Ogun State, Nigeria, located about 50km northeast of Lagos. It serves as the headquarters of the Remo Kingdom and is known for its rich cultural heritage, including the famous Ebi Festival.</p>
+            <p>With a population of over 250,000 people, Sagamu is a major commercial hub and transportation junction in southwestern Nigeria.</p>
+        </div>
+    </div>
+
+    <!-- Slide 2: Sagamu Geography -->
+    <div class="slide bg-2 hidden" id="slide2">
+        <div class="slide-content fade-in">
+            <i class="fas fa-globe-africa icon"></i>
+            <h1>Geography of Sagamu</h1>
+            <p>Sagamu is situated in the rainforest belt of southwestern Nigeria, with fertile land that supports agriculture, particularly cocoa production.</p>
+            <p>The town's strategic location along major transportation routes, including the Lagos-Ibadan Expressway, makes it an important transit point.</p>
+        </div>
+    </div>
+
+    <!-- Slide 3: Economy of Sagamu -->
+    <div class="slide bg-3 hidden" id="slide3">
+        <div class="slide-content fade-in">
+            <i class="fas fa-industry icon"></i>
+            <h1>Sagamu's Economy</h1>
+            <p>Sagamu's economy is diverse with agriculture (cocoa, kolanuts, oil palm), commerce (Sagamu Market), and industry (Dangote Cement Factory, breweries) forming the backbone.</p>
+            <p>The presence of multiple banks and financial institutions reflects the town's growing commercial significance.</p>
+        </div>
+    </div>
+
+    <!-- Slide 4: Education in Sagamu -->
+    <div class="slide bg-4 hidden" id="slide4">
+        <div class="slide-content fade-in">
+            <i class="fas fa-graduation-cap icon"></i>
+            <h1>Education in Sagamu</h1>
+            <p>Sagamu is home to several educational institutions including Babcock University, Remo Secondary School, and multiple primary and secondary schools.</p>
+            <p>The town has a growing educated population that can benefit from IT transformation.</p>
+        </div>
+    </div>
+
+    <!-- Slide 5: Healthcare in Sagamu -->
+    <div class="slide bg-1 hidden" id="slide5">
+        <div class="slide-content fade-in">
+            <i class="fas fa-hospital icon"></i>
+            <h1>Healthcare in Sagamu</h1>
+            <p>Sagamu has several healthcare facilities including Sagamu General Hospital, Olabisi Onabanjo University Teaching Hospital, and various private clinics.</p>
+            <p>IT can play a crucial role in enhancing healthcare delivery and patient management.</p>
+        </div>
+    </div>
+
+    <!-- Slide 6: IT for Agriculture -->
+    <div class="slide bg-2 hidden" id="slide6">
+        <div class="slide-content fade-in">
+            <i class="fas fa-tractor icon"></i>
+            <h1>IT for Agriculture</h1>
+            <p>Digital platforms can connect Sagamu farmers with markets beyond the local Sagamu Market, increasing their income potential.</p>
+            <p>Weather forecasting apps, soil analysis tools, and smart irrigation systems could revolutionize agricultural practices in the region.</p>
+        </div>
+    </div>
+
+    <!-- Slide 7: E-Commerce in Sagamu -->
+    <div class="slide bg-3 hidden" id="slide7">
+        <div class="slide-content fade-in">
+            <i class="fas fa-shopping-cart icon"></i>
+            <h1>E-Commerce Potential</h1>
+            <p>Sagamu's strategic location makes it ideal for e-commerce logistics hubs serving southwestern Nigeria.</p>
+            <p>Local businesses could leverage digital marketplaces to reach customers in Lagos, Ibadan, and beyond.</p>
+        </div>
+    </div>
+
+    <!-- Slide 8: Digital Education -->
+    <div class="slide bg-4 hidden" id="slide8">
+        <div class="slide-content fade-in">
+            <i class="fas fa-laptop-code icon"></i>
+            <h1>Digital Education</h1>
+            <p>IT can bridge education gaps by providing e-learning platforms for students at all levels.</p>
+            <p>Coding bootcamps and digital skills training could prepare Sagamu's youth for tech jobs and entrepreneurship.</p>
+        </div>
+    </div>
+
+    <!-- Slide 9: Smart Transportation -->
+    <div class="slide bg-1 hidden" id="slide9">
+        <div class="slide-content fade-in">
+            <i class="fas fa-bus icon"></i>
+            <h1>Smart Transportation</h1>
+            <p>Ride-hailing apps could modernize transportation within Sagamu and to neighboring towns.</p>
+            <p>Digital ticketing systems for interstate buses could make travel more efficient for commuters using Sagamu as a transit point.</p>
+        </div>
+    </div>
+
+    <!-- Slide 10: Telemedicine -->
+    <div class="slide bg-2 hidden" id="slide10">
+        <div class="slide-content fade-in">
+            <i class="fas fa-tablets icon"></i>
+            <h1>Telemedicine Solutions</h1>
+            <p>Mobile health apps could provide remote consultations, reducing pressure on physical healthcare facilities.</p>
+            <p>Digital records systems could improve patient care coordination between the Teaching Hospital and local clinics.</p>
+        </div>
+    </div>
+
+    <!-- Slide 11: Digital Government -->
+    <div class="slide bg-3 hidden" id="slide11">
+        <div class="slide-content fade-in">
+            <i class="fas fa-landmark icon"></i>
+            <h1>Digital Government</h1>
+            <p>E-governance platforms could streamline interactions between residents and local government.</p>
+            <p>Online payment systems for taxes and utilities would reduce queues and improve revenue collection.</p>
+        </div>
+    </div>
+
+    <!-- Slide 12: Cybersecurity -->
+    <div class="slide bg-4 hidden" id="slide12">
+        <div class="slide-content fade-in">
+            <i class="fas fa-shield-alt icon"></i>
+            <h1>Cybersecurity Needs</h1>
+            <p>As digital adoption grows, so does cybercrime risk - education on online safety is crucial.</p>
+            <p>Local fintech startups and mobile banking users need protection against digital financial fraud.</p>
+        </div>
+    </div>
+
+    <!-- Slide 13: Digital Tourism -->
+    <div class="slide bg-1 hidden" id="slide13">
+        <div class="slide-content fade-in">
+            <i class="fas fa-camera-retro icon"></i>
+            <h1>Digital Tourism</h1>
+            <p>Virtual tours could showcase Sagamu's cultural heritage like the Akarigbo Palace to a global audience.</p>
+            <p>Mobile apps could guide visitors to historical sites and upcoming festival events.</p>
+        </div>
+    </div>
+
+    <!-- Slide 14: Community Networks -->
+    <div class="slide bg-2 hidden" id="slide14">
+        <div class="slide-content fade-in">
+            <i class="fas fa-users icon"></i>
+            <h1>Community Networks</h1>
+            <p>Local social platforms could strengthen community ties among Sagamu residents at home and abroad.</p>
+            <p>Digital noticeboards could improve information sharing about events, emergencies, and community initiatives.</p>
+        </div>
+    </div>
+
+    <!-- Slide 15: Data Centers -->
+    <div class="slide bg-3 hidden" id="slide15">
+        <div class="slide-content fade-in">
+            <i class="fas fa-server icon"></i>
+            <h1>Data Center Potential</h1>
+            <p>Sagamu's proximity to Lagos and relatively stable power supply (especially in industrial areas) makes it attractive for data center development.</p>
+            <p>This could create tech jobs and support digital transformation across sectors.</p>
+        </div>
+    </div>
+
+    <!-- Slide 16: Digital Manufacturing -->
+    <div class="slide bg-4 hidden" id="slide16">
+        <div class="slide-content fade-in">
+            <i class="fas fa-robot icon"></i>
+            <h1>Smart Manufacturing</h1>
+            <p>Existing industries like Dangote Cement could benefit from Industry 4.0 technologies - IoT sensors, predictive maintenance, etc.</p>
+            <p>Digital workforce training programs could prepare local workers for high-tech manufacturing jobs.</p>
+        </div>
+    </div>
+
+    <!-- Slide 17: Fintech Opportunities -->
+    <div class="slide bg-1 hidden" id="slide17">
+        <div class="slide-content fade-in">
+            <i class="fas fa-money-bill-wave icon"></i>
+            <h1>Fintech for Sagamu</h1>
+            <p>Digital payment solutions could formalize the large informal economy and increase financial inclusion.</p>
+            <p>Mobile banking and agent banking networks could extend financial services to rural areas around Sagamu.</p>
+        </div>
+    </div>
+
+    <!-- Slide 18: Real Estate Tech -->
+    <div class="slide bg-2 hidden" id="slide18">
+        <div class="slide-content fade-in">
+            <i class="fas fa-home icon"></i>
+            <h1>Real Estate Tech</h1>
+            <p>Property listing platforms could bring transparency to Sagamu's growing real estate market.</p>
+            <p>3D virtual tours could help diaspora Remo people invest in property back home more confidently.</p>
+        </div>
+    </div>
+
+    <!-- Slide 19: Infrastructure Monitoring -->
+    <div class="slide bg-3 hidden" id="slide19">
+        <div class="slide-content fade-in">
+            <i class="fas fa-road icon"></i>
+            <h1>Infrastructure Monitoring</h1>
+            <p>IoT sensors could help monitor road conditions, especially during rainy seasons that often cause flooding around Sagamu.</p>
+            <p>Citizen reporting apps could enable residents to alert authorities about infrastructure issues more efficiently.</p>
+        </div>
+    </div>
+
+    <!-- Slide 20: Conclusion -->
+    <div class="slide bg-4 hidden" id="slide20">
+        <div class="slide-content fade-in">
+            <i class="fas fa-lightbulb icon"></i>
+            <h1>Sagamu's Digital Future</h1>
+            <p>Information Technology presents transformative opportunities across all sectors of Sagamu's economy - from agriculture to education, healthcare to manufacturing.</p>
+            <p>With strategic investments in digital infrastructure, skills development, and innovation ecosystems, Sagamu can position itself as a smart city model for mid-sized Nigerian towns.</p>
+            <p>The foundation exists - what's needed now is coordinated action from government, private sector, educational institutions and the community.</p>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <button class="nav-btn" id="prevBtn"><i class="fas fa-arrow-left mr-2"></i>Previous</button>
+        <button class="nav-btn" id="nextBtn">Next<i class="fas fa-arrow-right ml-2"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const progressBar = document.querySelector('.progress-bar');
+            let currentSlide = 0;
+            
+            // Show first slide
+            showSlide(currentSlide);
+            
+            // Next button click
+            nextBtn.addEventListener('click', function() {
+                if (currentSlide < slides.length - 1) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            });
+            
+            // Previous button click
+            prevBtn.addEventListener('click', function() {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowRight') {
+                    if (currentSlide < slides.length - 1) {
+                        currentSlide++;
+                        showSlide(currentSlide);
+                    }
+                } else if (e.key === 'ArrowLeft') {
+                    if (currentSlide > 0) {
+                        currentSlide--;
+                        showSlide(currentSlide);
+                    }
+                }
+            });
+            
+            // Function to show slide
+            function showSlide(index) {
+                // Hide all slides
+                slides.forEach(slide => {
+                    slide.classList.add('hidden');
+                });
+                
+                // Show current slide
+                slides[index].classList.remove('hidden');
+                
+                // Update progress bar
+                progressBar.style.width = `${(index + 1) * (100 / slides.length)}%`;
+                
+                // Disable buttons when at the beginning or end
+                prevBtn.disabled = index === 0;
+                nextBtn.disabled = index === slides.length - 1;
+                
+                // Add animation
+                setTimeout(() => {
+                    const content = slides[index].querySelector('.slide-content');
+                    content.classList.remove('fade-in');
+                    void content.offsetWidth; // Trigger reflow
+                    content.classList.add('fade-in');
+                }, 100);
+            }
+            
+            // Touch swipe support
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            document.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].screenX;
+            }, false);
+            
+            document.addEventListener('touchend', function(e) {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, false);
+            
+            function handleSwipe() {
+                if (touchEndX < touchStartX && currentSlide < slides.length - 1) {
+                    // Swipe left - next
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+                
+                if (touchEndX > touchStartX && currentSlide > 0) {
+                    // Swipe right - prev
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
