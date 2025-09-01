@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Details</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#00C795',secondary:'#F5A623'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+}
+.timer-progress {
+transition: width 1s linear;
+}
+</style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+<div class="max-w-[375px] mx-auto min-h-screen relative pb-20">
+<!-- Header -->
+<nav class="fixed w-full top-0 bg-white shadow-sm z-10">
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center">
+<button class="w-8 h-8 flex items-center justify-center cursor-pointer" id="backButton">
+<i class="ri-arrow-left-line ri-lg"></i>
+</button>
+<h1 class="text-lg font-semibold ml-2">Payment Details</h1>
+</div>
+<div class="w-8 h-8 flex items-center justify-center">
+<span class="font-['Pacifico'] text-primary">logo</span>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<div class="pt-16 px-4 pb-24">
+<!-- Amount Section -->
+<div class="bg-white rounded-lg shadow-sm p-5 mt-4">
+<div class="flex justify-between items-center">
+<div>
+<p class="text-sm text-gray-500">Amount </p>
+<h2 class="text-2xl font-bold">₦25,000.00</h2>
+</div>
+<div class="flex items-center bg-green-50 text-primary px-3 py-1 rounded-full">
+<i class="ri-lock-line ri-sm mr-1"></i>
+<span class="text-xs font-medium">Secure</span>
+</div>
+</div>
+<div class="mt-3">
+<p class="text-xs text-gray-500">Reference: <span class="font-medium text-gray-700">TRX-25689742</span></p>
+</div>
+</div>
+<!-- Timer Section -->
+<div class="bg-white rounded-lg shadow-sm p-5 mt-4">
+<div class="flex justify-between items-center mb-2">
+<p class="text-sm font-medium">Time Remaining</p>
+<p class="text-sm font-bold" id="timer">15:00</p>
+</div>
+<div class="w-full bg-gray-100 rounded-full h-2">
+<div id="timerProgress" class="timer-progress bg-primary h-2 rounded-full" style="width: 100%"></div>
+</div>
+<p class="text-xs text-gray-500 mt-2">Complete your payment before time expires</p>
+</div>
+<!-- Bank Transfer Details -->
+<div class="bg-white rounded-lg shadow-sm p-5 mt-4">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-semibold">Bank Transfer Details</h3>
+<div class="flex items-center text-primary">
+<i class="ri-bank-line ri-lg mr-1"></i>
+</div>
+</div>
+<div class="bg-gray-50 rounded-lg p-4 mb-4">
+<p class="text-sm text-gray-500 mb-1">Bank Name</p>
+<p class="font-semibold">UNITED BANK OF AFRICA(UBA)</p>
+</div>
+<div class="bg-gray-50 rounded-lg p-4 mb-4">
+<div class="flex justify-between items-center">
+<div>
+<p class="text-sm text-gray-500 mb-1">Account Number</p>
+<p class="font-semibold text-lg">2347972093</p>
+</div>
+<button id="copyButton" class="bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-button flex items-center cursor-pointer">
+<i class="ri-file-copy-line ri-sm mr-1"></i>
+<span class="text-sm">Copy</span>
+</button>
+</div>
+</div>
+<div class="bg-gray-50 rounded-lg p-4">
+<p class="text-sm text-gray-500 mb-1">Account Name</p>
+<p class="font-semibold">ADEYEMI ABDUL-HAMEED ADEOYE</p>
+</div>
+</div>
+<!-- Instructions -->
+<div class="bg-white rounded-lg shadow-sm p-5 mt-4">
+<h3 class="font-semibold mb-3">How to Pay</h3>
+<ol class="list-decimal pl-5 text-sm space-y-2">
+<li>Log in to your banking app or visit your bank</li>
+<li>Select "Transfer" or "Send Money"</li>
+<li>Enter the account number: <span class="font-medium">2347972093</span></li>
+<li>Enter the amount: <span class="font-medium">₦25,000.00</span></li>
+<li>Use reference code: <span class="font-medium">TRX-25689742</span></li>
+<li>Complete the transfer</li>
+</ol>
+<div class="mt-4 bg-blue-50 p-3 rounded-lg">
+<p class="text-xs text-blue-700 flex items-start">
+<i class="ri-information-line ri-lg mr-1 mt-0.5"></i>
+<span>Your payment will be automatically verified within 5 minutes after successful transfer.</span>
+</p>
+</div>
+</div>
+<!-- Payment Status -->
+<div id="paymentStatus" class="bg-white rounded-lg shadow-sm p-5 mt-4 hidden">
+<div class="flex flex-col items-center justify-center py-3">
+<div id="loadingStatus" class="flex flex-col items-center">
+<div class="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin mb-3"></div>
+<p class="text-sm font-medium">Verifying your payment...</p>
+<p class="text-xs text-gray-500 mt-1">This may take a few moments</p>
+</div>
+<div id="successStatus" class="flex flex-col items-center hidden">
+<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-3">
+<i class="ri-check-line ri-2x text-primary"></i>
+</div>
+<p class="text-lg font-medium">Payment Successful!</p>
+<p class="text-sm text-gray-500 mt-1">Your transaction has been completed</p>
+</div>
+<div id="failureStatus" class="flex flex-col items-center hidden">
+<div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-3">
+<i class="ri-close-line ri-2x text-red-500"></i>
+</div>
+<p class="text-lg font-medium">Payment Failed</p>
+<p class="text-sm text-gray-500 mt-1">Please try again or use another payment method</p>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="mt-6 space-y-3">
+<button id="confirmPaymentBtn" class="w-full bg-green-500 text-white py-3.5 rounded-button font-medium cursor-pointer flex items-center justify-center">
+<i class="ri-check-double-line ri-lg mr-2"></i>
+I have done it
+</button>
+<a href="https://api.whatsapp.com/send?phone=2349029734223&text=%22Hello%2C%20Send%20your%20product%20and%20receipt%20of%20payment%22"  class="block w-full bg-primary text-white py-3.5 rounded-button font-medium cursor-pointer mt-3 text-center flex items-center justify-center">
+<i class="ri-file-text-line ri-lg mr-2"></i>
+Send Receipt
+</a>
+<button id="cancelBtn" class="w-full bg-white border border-gray-300 text-gray-700 py-3.5 rounded-button font-medium cursor-pointer mt-3">
+Cancel Transaction
+</button>
+</div>
+<!-- Support Section -->
+<div class="mt-6">
+<div class="flex justify-center">
+<button class="text-primary text-sm flex items-center cursor-pointer">
+<i class="ri-customer-service-2-line ri-lg mr-1"></i>
+Need help? Contact support
+</button>
+</div>
+</div>
+<!-- Security Badges -->
+<div class="mt-8 flex justify-center space-x-4">
+<div class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full">
+<i class="ri-shield-check-line ri-lg text-gray-500"></i>
+</div>
+<div class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full">
+<i class="ri-lock-line ri-lg text-gray-500"></i>
+</div>
+<div class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full">
+<i class="ri-secure-payment-line ri-lg text-gray-500"></i>
+</div>
+</div>
+<p class="text-xs text-center text-gray-500 mt-2">All transactions are secure and encrypted</p>
+</div>
+<!-- Custom Toast Notification -->
+<div id="toast" class="fixed bottom-20 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-lg opacity-0 transition-opacity duration-300 z-50">
+Account number copied!
+</div>
+<!-- Footer -->
+<div class="fixed bottom-0 w-full bg-white border-t border-gray-200 p-4 text-center">
+<p class="text-xs text-gray-500">Powered by <span class="font-['Pacifico'] text-primary">logo</span> Payment Services</p>
+<p class="text-xs text-gray-400 mt-1">© 2025 All rights reserved</p>
+</div>
+</div>
+<!-- Timer Script -->
+<script id="timerScript">
+document.addEventListener('DOMContentLoaded', function() {
+// Set the timer for 15 minutes
+let timeLeft = 15 * 60; // 15 minutes in seconds
+const timerElement = document.getElementById('timer');
+const timerProgress = document.getElementById('timerProgress');
+const timerInterval = setInterval(function() {
+timeLeft--;
+// Update the timer display
+const minutes = Math.floor(timeLeft / 60);
+const seconds = timeLeft % 60;
+timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+// Update progress bar
+const progressPercentage = (timeLeft / (15 * 60)) * 100;
+timerProgress.style.width = `${progressPercentage}%`;
+// Change color when less than 5 minutes
+if (timeLeft < 5 * 60) {
+timerProgress.classList.remove('bg-primary');
+timerProgress.classList.add('bg-secondary');
+// Make timer text blink when less than 2 minutes
+if (timeLeft < 2 * 60) {
+timerElement.classList.toggle('text-red-500');
+}
+}
+// Stop the timer when it reaches 0
+if (timeLeft <= 0) {
+clearInterval(timerInterval);
+timerElement.textContent = "00:00";
+timerElement.classList.add('text-red-500');
+timerProgress.style.width = "0%";
+}
+}, 1000);
+});
+</script>
+<!-- Copy Button Script -->
+<script id="copyButtonScript">
+document.addEventListener('DOMContentLoaded', function() {
+const copyButton = document.getElementById('copyButton');
+const toast = document.getElementById('toast');
+copyButton.addEventListener('click', function() {
+// Copy account number to clipboard
+navigator.clipboard.writeText('2347972093')
+.then(() => {
+// Show toast
+toast.classList.remove('opacity-0');
+toast.classList.add('opacity-100');
+// Hide toast after 2 seconds
+setTimeout(() => {
+toast.classList.remove('opacity-100');
+toast.classList.add('opacity-0');
+}, 2000);
+})
+.catch(err => {
+console.error('Failed to copy: ', err);
+});
+});
+});
+</script>
+<!-- Payment Confirmation Script -->
+<script id="paymentConfirmationScript">
+document.addEventListener('DOMContentLoaded', function() {
+const confirmPaymentBtn = document.getElementById('confirmPaymentBtn');
+const cancelBtn = document.getElementById('cancelBtn');
+const paymentStatus = document.getElementById('paymentStatus');
+const loadingStatus = document.getElementById('loadingStatus');
+const successStatus = document.getElementById('successStatus');
+const failureStatus = document.getElementById('failureStatus');
+confirmPaymentBtn.addEventListener('click', function() {
+// Show payment status section
+paymentStatus.classList.remove('hidden');
+// Show loading status
+loadingStatus.classList.remove('hidden');
+successStatus.classList.add('hidden');
+failureStatus.classList.add('hidden');
+// Disable buttons during verification
+confirmPaymentBtn.disabled = true;
+confirmPaymentBtn.classList.add('opacity-70');
+cancelBtn.disabled = true;
+cancelBtn.classList.add('opacity-70');
+// Simulate payment verification (random success/failure for demo)
+setTimeout(() => {
+loadingStatus.classList.add('hidden');
+// Random success/failure (80% success rate)
+if (Math.random() < 0.8) {
+successStatus.classList.remove('hidden');
+} else {
+failureStatus.classList.remove('hidden');
+// Re-enable buttons on failure
+confirmPaymentBtn.disabled = false;
+confirmPaymentBtn.classList.remove('opacity-70');
+cancelBtn.disabled = false;
+cancelBtn.classList.remove('opacity-70');
+}
+}, 3000);
+});
+cancelBtn.addEventListener('click', function() {
+// Show confirmation dialog
+if (confirm('Are you sure you want to cancel this transaction?')) {
+// Redirect to home page or previous page
+window.history.back();
+}
+});
+// Back button functionality
+document.getElementById('backButton').addEventListener('click', function() {
+window.history.back();
+});
+});
+</script>
+</body>
+</html>
