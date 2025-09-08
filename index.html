@@ -4,47 +4,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS 101</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
-        rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
+    <title>Team Sapphire - Innovating with Rayyan Technologies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+
+        .leader-badge {
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+        }
+    </style>
 </head>
-<body>
-    <h1 class="text-center">Team Saphire</h1>
-    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi veniam adipisci error iusto quos accusamus, id
-        eaque illum voluptate quisquam quo saepe quas sit nemo tempora consequuntur voluptas dolorem, itaque, magni
-        corrupti ut! Excepturi, libero. Laboriosam excepturi eligendi sequi nobis cupiditate dolore repellendus
-        voluptatum vero, ullam eveniet quos alias commodi?</p>
-    <h2 class="text-center">Team Members</h2>
-    <div class="flex">
-        <div>
-            <a href="fawaz/">
-                <img src="https://avatars.githubusercontent.com/u/91906160?v=4" alt="Mr Fawaz">
-            <p class="text-center fs-14 m-0">Master Fawaz</p>
-            <p>Lead Developer @ Rayyan Technologies</p>
-            </a>
-            
+
+<body class="bg-gray-100 text-gray-900">
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-12 fade-in">
+        <div class="container mx-auto text-center">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ac905cc2-d971-435c-a345-8d0046cd484d.png"
+                alt="Circular logo of Team Sapphire with a polished sapphire gemstone in the center surrounded by abstract tech circuit patterns in shades of blue and purple, evoking innovation and collaboration"
+                class="w-24 h-24 mx-auto mb-4 rounded-full border-4 border-white">
+            <h1 class="text-4xl font-bold mb-2">Team Sapphire</h1>
+            <p class="text-xl">Empowering Innovation with Cutting-Edge Technology</p>
+            <p class="text-lg">Led by Rayyan Technologies</p>
         </div>
-    
-        <div>
-            <a href="adeoye/index.html">
-            <img src="adeoye/HAMEED.jpg" alt="Abdul-hameed portrait">
-            <p class="text-center  fs-14 m-0">Abdul-Hameed Adeyemi</p>
-            <p class="text-center">Intern @ Rayyan Technologies</p>
-            </a>
+    </header>
+
+    <!-- About Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">About Our Team</h2>
+            <p class="text-center text-lg mb-8">Team Sapphire is a dynamic group of tech enthusiasts led by Rayyan
+                Technologies, dedicated to creating impactful projects that push the boundaries of software development,
+                AI, and user experience design. Our diverse team brings together expertise in multiple domains to
+                deliver exceptional results.</p>
         </div>
-    
-        <div>
-            <a href="toheeb/index.html">
-            <img src="https://avatars.githubusercontent.com/u/193350504?s=400&u=07c15565a66d80d8fb92abf786ab80babd51b868&v=4" alt="clean image">
-            <center><p class="text-center fs-14 m-0">Toheeb Ayorinde</p></center>
-            <p class="text-center">Intern @ Rayyan Technologies</p>
-            </a>
+    </section>
+
+    <!-- Member Profiles Section -->
+    <section id="members" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Meet Our Members</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Team Leader -->
+                <div class="profile-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/afd6d05d-c772-4d89-a39a-1ce672c5331d.png"
+                        alt="Professional headshot of Rayyan Technologies as the team leader, a confident man in his 30s with short dark hair, wearing a modern suit jacket over a button-up shirt, standing against a backdrop of futuristic cityscape with glowing lights representing technology leadership"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Rayyan Technologies</h3>
+                        <span class="leader-badge inline-block px-3 py-1 text-white text-sm rounded-full mb-2">Team
+                            Leader</span>
+                        <p class="text-gray-600 mb-4">Visionary entrepreneur with over 10 years in tech innovation,
+                            specializing in AI and strategic planning. Leads the team with a focus on scalable,
+                            user-centered solutions.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">AI & Machine Learning</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded">Strategic Leadership</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Member 1 -->
+                <div class="profile-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+                    <a href="adeoye/index.html"><img src="adeoye/HAMEED.jpg"
+                            alt="Creative portrait of Emma Chen, a skilled full-stack developer with long dark hair in a ponytail, wearing casual tech attire with a laptop motif in the background, smiling brightly to convey enthusiasm for coding and problem-solving"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Adeyemi Abdul-hameed</h3>
+                            <p class="text-gray-600 mb-4">Full-stack developer passionate about creating seamless web
+                                applications. Expertise in TailwindCSS,CSS,JavaScript,and vibe coding to build robust
+                                software solutions.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">TailwindCSS</span>
+                                <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded">JavaScript</span>
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>
-    
+        <!-- Member 2 -->
+        <div class="profile-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+            <a href="https://temitechub.github.io/"><img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4a64f499-a5a3-43fb-bfdc-ade5d6cf34fe.png"
+                alt="Artistic image of Alex Rivera, a UI/UX designer in his late 20s with a beard, wearing designer glasses and a graphic T-shirt, posing with a digital tablet showing colorful app mockups in a creative studio setting with inspiration wall"
+                class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">Ayorinde Toheeb</h3>
+                <p class="text-gray-600 mb-4">Creative UI/UX designer with an eye for detail and user-driven design.
+                    Specializes in Figma, Adobe XD, and prototyping tools to craft intuitive digital experiences.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded">UI/UX Design</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded">Figma</span></a>
+                </div>
+            </div>
+        </div>
+        <!-- Member 3 -->
+        <div class="profile-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+            <a href="https://ibrohimtech.github.io/"><img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3e11a551-966d-403f-9ca6-62a6095e2f6b.png"
+                alt="Confident close-up of Sofia Patel, a cybersecurity expert with chin-length curly hair, wearing a professional blazer, standing in a secure data center environment with glowing servers and security monitors, exuding vigilance and technical mastery"
+                class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">Jimoh Ibrahim Taiwo</h3>
+                <p class="text-gray-600 mb-4">Cybersecurity specialist focused on protecting digital assets. Proficient
+                    in ethical hacking, network security, and compliance frameworks to ensure data integrity.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-red-100 text-red-800 px-2 py-1 rounded">Cybersecurity</span>
+                    <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded">Ethical Hacking</span></a>
+                </div>
+            </div>
+        </div>
+        <!-- Member 4 -->
+        <div class="profile-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+            <a href="https://Kamaldeen101.github.io/"><img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/99a99ed7-5cc6-4706-82f5-851127aa5790.png"
+                alt="Dynamic action shot of Marcus Lee, a DevOps engineer with a short fade haircut, dressed in a hoodie with tech gadgets around, working on a terminal screen displaying deployment scripts in a high-tech lab with multiple screens"
+                class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">Jimoh Kamaldeen Kehinde</h3>
+                <p class="text-gray-600 mb-4">DevOps engineer streamlining deployment pipelines. Expert in Docker,
+                    Kubernetes, and CI/CD automation to accelerate software delivery and maintain system reliability.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-cyan-100 text-cyan-800 px-2 py-1 rounded">Docker</span>
+                    <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded">Kubernetes</span></a>
+                </div>
+            </div>
+        </div>
+        <!-- Member 5 -->
+        <div class="profile-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+            <a href="https://Abioduntech.github.io/"><img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2560cbcc-083b-47b4-9537-c65623522d96.png"
+                alt="Intellectual portrait of Lily Wang, a data scientist with sleek straight hair, wearing thick-rimmed glasses and a casual sweater, surrounded by data visualizations and graphs on a monitor in a research library setting with books of algorithms"
+                class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">Sheu Mubarak</h3>
+                <p class="text-gray-600 mb-4">Data scientist uncovering insights from complex datasets. Skilled in
+                    Python, machine learning algorithms, and big data tools to drive predictive analytics and informed
+                    decisions.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded">Python</span>
+                    <span class="bg-teal-100 text-teal-800 px-2 py-1 rounded">Machine Learning</span>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Our Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="project-card text-white rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-bold mb-4">AI-Powered Chatbot</h3>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d085299a-2c0a-4cf9-9dcc-bda91d54a4ab.png"
+                        alt="Futuristic chatbot interface displaying a conversation with a holographic AI avatar in a sci-fi themed room with glowing neural network patterns and data streams flowing around, highlighting AI intelligence and user interaction"
+                        class="w-full h-40 object-cover rounded mb-4">
+                    <p class="mb-4">An intelligent chatbot using natural language processing to provide personalized
+                        customer support, built with TensorFlow and integrated into web platforms for seamless user
+                        engagement.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white text-gray-800 px-2 py-1 rounded">TensorFlow</span>
+                        <span class="bg-white text-gray-800 px-2 py-1 rounded">NLP</span>
+                    </div>
+                </div>
+                <div class="project-card text-white rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-bold mb-4">E-Commerce Platform</h3>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c230df73-3616-456b-aeca-1e3a7157efbe.png"
+                        alt="Modern e-commerce website screenshot with shopping carts, product galleries, secure payment icons, and a clean shopping experience on a tablet device surrounded by coffee and design tools, emphasizing ease of use and security"
+                        class="w-full h-40 object-cover rounded mb-4">
+                    <p class="mb-4">A scalable e-commerce solution with real-time inventory, payment integration, and
+                        responsive design, developed using MERN stack for high-performance online retail experiences.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white text-gray-800 px-2 py-1 rounded">MERN Stack</span>
+                        <span class="bg-white text-gray-800 px-2 py-1 rounded">Stripe Payment</span>
+                    </div>
+                </div>
+                <div class="project-card text-white rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Smart IoT Home Dashboard</h3>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/80b7d5ef-c016-4b8f-aa95-d0717ac29f85.png"
+                        alt="Interactive IoT dashboard on a smart home device screen displaying temperature controls, security cameras, energy monitoring graphs, and connected appliances with a cozy living room background showing smart lights and devices"
+                        class="w-full h-40 object-cover rounded mb-4">
+                    <p class="mb-4">A comprehensive IoT dashboard for home automation, featuring sensor data
+                        visualization, remote controls, and predictive maintenance, coded in Python with MQTT protocol.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white text-gray-800 px-2 py-1 rounded">Python</span>
+                        <span class="bg-white text-gray-800 px-2 py-1 rounded">MQTT</span>
+                    </div>
+                </div>
+                <div class="project-card text-white rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Collaborative Code Editor</h3>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7ca9f461-8b90-48b1-bc0c-4a69f1dd1a07.png"
+                        alt="Sleek collaborative code editor interface with multiple users editing code in real-time, featuring syntax highlighting, version control icons, and a team chat sidebar in a professional coding environment"
+                        class="w-full h-40 object-cover rounded mb-4">
+                    <p class="mb-4">A real-time collaborative code editor with syntax highlighting, project management
+                        features, and version control, built for teams using WebSocket and React for fluid multi-user
+                        editing.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white text-gray-800 px-2 py-1 rounded">WebSocket</span>
+                        <span class="bg-white text-gray-800 px-2 py-1 rounded">React</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>© 2025 Team Sapphire. All rights reserved.</p>
+            <p>Empowered by Rayyan Technologies</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <button onclick="alert('Contact Rayyan Technologies!')"
+                    class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded">Contact Leader</button>
+                <button onclick="alert('View all projects')"
+                    class="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded">Explore More</button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for interactivity: Fade in on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        });
+
+        document.querySelectorAll('.profile-card, .project-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Smooth scroll for navigation (though no nav, can add if needed)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
+</content>
+</create_file>
